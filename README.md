@@ -8,7 +8,7 @@ How to Use
 
 Copy the corrupted WinDaq file to the same folder where fix_windaq.exe is located.
 
-Run the utility using the following command: fix_windaq.exe SAMPLE.WDQ, where SAMPLE.WDQ is a corrupted WinDaq file in this example
+Run the utility using the following command: fix_windaq.exe SAMPLE.WDQ, where SAMPLE.WDQ is a corrupted sample WinDaq file in this folder for testing purpose. 
 
 This will generate a repaired version named SAMPLE_MODIFIED.WDQ.
 
