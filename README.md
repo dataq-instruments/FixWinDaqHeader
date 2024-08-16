@@ -15,3 +15,5 @@ This will generate a repaired version named SAMPLE_MODIFIED.WDQ.
 Customization and Further Repairs
 
 You can modify the program to include additional tests and remedial actions for repairing more complex issues with your WinDaq file.
+
+For more info regarding WinDaq header, please visit https://www.dataq.com/resources/techinfo/ff.htm
