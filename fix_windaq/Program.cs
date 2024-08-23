@@ -24,14 +24,15 @@ class Program
             // Read the binary file into a byte array
             byte[] fileBytes = File.ReadAllBytes(filePath);
 
-            if (fileBytes.Length < 18)
+
+            // Read header size (byte 6 and 7) in little endian format
+            ushort headerSize = BitConverter.ToUInt16(fileBytes, 6);
+
+            if (fileBytes.Length <= headerSize)
             {
                 Console.WriteLine("File is too small to contain the required header.");
                 return;
             }
-
-            // Read header size (byte 6 and 7) in little endian format
-            ushort headerSize = BitConverter.ToUInt16(fileBytes, 6);
 
             // Calculate new value for bytes 8 to 11 (file size - header size)
             uint newLongWordValue = (uint)(fileBytes.Length - headerSize);
@@ -43,6 +44,24 @@ class Program
             for (int i = 12; i <= 17; i++)
             {
                 fileBytes[i] = 0;
+            }
+
+            // Check the double-precision number at bytes 28 to 35
+            double doubleValue = BitConverter.ToDouble(fileBytes, 28);
+
+            // If the value is zero or less, prompt the user to enter a new number
+            if (doubleValue <= 0)
+            {
+                Console.WriteLine("The time interval stored at bytes 28 to 35 is zero or negative.");
+                Console.Write("Please enter a new positive time interval: ");
+                double newValue;
+                while (!double.TryParse(Console.ReadLine(), out newValue) || newValue <= 0)
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid positive number.");
+                }
+
+                // Place the new value in bytes 28 to 35
+                BitConverter.GetBytes(newValue).CopyTo(fileBytes, 28);
             }
 
             // Generate a new file name
