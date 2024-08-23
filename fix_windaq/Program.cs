@@ -38,12 +38,24 @@ class Program
             uint newLongWordValue = (uint)(fileBytes.Length - headerSize);
 
             // Change the unsigned long word at bytes 8 to 11
+            Console.WriteLine("Adjust data size to match filesize");
             BitConverter.GetBytes(newLongWordValue).CopyTo(fileBytes, 8);
 
             // Change bytes 12 to 17 to 0
+            Console.WriteLine("Warning: Clearing event markers and user annotations");
+
             for (int i = 12; i <= 17; i++)
             {
                 fileBytes[i] = 0;
+            }
+
+            // Read compression size (byte 44 to 77) in little endian format
+            Int32 CompressionSize = BitConverter.ToInt32(fileBytes, 44);
+            if (CompressionSize <= 0)
+            {
+                Console.WriteLine("The compression can't be zero or negative. Change to 1");
+                CompressionSize = 1;
+                BitConverter.GetBytes(CompressionSize).CopyTo(fileBytes, 44);
             }
 
             // Check the double-precision number at bytes 28 to 35
