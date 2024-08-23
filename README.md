@@ -1,6 +1,6 @@
 # Utility for Fixing Common Issues with WinDaq Headers 
 
-If your hard drive is damaged or power is lost during data acquisition, your WinDaq file may become corrupted. This can lead to errors such as: "Illegal header value 8 bytes from the start of the file.", "Illegal header value 28 bytes from the start of the file", "Illegal header value 44 bytes from the start of the file", "Illegal header value 12 bytes from the start of the file." or "Illegal header value 16 bytes from the start of the file".
+If your hard drive is damaged or power is lost during data acquisition, your WinDaq file may become corrupted. This can lead to errors such as: "Illegal header value 8 bytes from the start of the file.", "Illegal header value 12 bytes from the start of the file", "Illegal header value 16 bytes from the start of the file", "Illegal header value 28 bytes from the start of the file." or "Illegal header value 44 bytes from the start of the file".
 
 This ChatGPT generated simple utility is designed to address such issues. It examines damaged WinDaq files, adjusts the file size, forcely removes event markers and annotations, and make sure compression and sample interval are both positive numbers, and saves a repaired version that you can open.
 
