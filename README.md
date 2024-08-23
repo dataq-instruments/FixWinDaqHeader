@@ -12,9 +12,13 @@ Run the utility using the following command:
 
 fix_windaq.exe SAMPLE.WDQ
 
-where SAMPLE.WDQ is a corrupted sample WinDaq file in this folder for testing purpose. 
+or
 
-This will generate a repaired version named SAMPLE_modified.WDQ
+fix_windaq.exe sample_byte28.wdq
+
+where SAMPLE.WDQ and sample_byte28.wdq are corrupted sample WinDaq files in this folder for testing purpose
+
+This will generate a repaired version named SAMPLE_modified.WDQ or sample_byte28_modified.wdq
 
 Customization and Further Repairs
 
