@@ -6,23 +6,13 @@ This ChatGPT generated simple utility is designed to address such issues. It exa
 
 How to Use
 
-Copy the corrupted WinDaq file to the same folder where fix_windaq.exe is located.
+Copy the corrupted WinDaq file to the same folder where fix_windaq.exe is located. We will use a corrupted Windaq file Sample.Wdq for example below
 
 Run the utility using the following command: 
 
 fix_windaq.exe SAMPLE.WDQ
 
-or
-
-fix_windaq.exe sample_byte28.wdq
-
-or 
-
-fix_windaq.exe sample_byte44.wdq
-
-where SAMPLE.WDQ, sample_byte28.wdq and sample_byte44.wdq are corrupted sample WinDaq files in this folder for testing purpose
-
-This will generate a repaired version named SAMPLE_modified.WDQ or sample_byte28_modified.wdq or sample_byte44_modified.wdq
+This will generate a repaired version named SAMPLE_modified.WDQ. You can try the other corrupted Windaq files in the same GitHub folder
 
 Warning: The utility forcely removes event markers and user annotations
 
