@@ -22,4 +22,4 @@ You can modify the program to include additional tests and remedial actions for 
 
 For more info regarding WinDaq header, please visit https://www.dataq.com/resources/techinfo/ff.htm
 
-Other errors concerning illegal value in header higher than offset 110, such as "Illegal header value 118 bytes from the start of the file", usually indicates a more complicaterd problem. This blog https://www.dataq.com/blog/analysis-software/reset-the-windaq-header-to-clear-up-illegal-header-value-errors/ shows how to repair it.
+Other errors concerning illegal value in header higher than offset 110, such as "Illegal header value 118 bytes from the start of the file", usually indicates a more complicated problem. This blog https://www.dataq.com/blog/analysis-software/reset-the-windaq-header-to-clear-up-illegal-header-value-errors/ shows how to repair it.
