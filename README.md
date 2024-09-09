@@ -21,3 +21,5 @@ Customization and Further Repairs
 You can modify the program to include additional tests and remedial actions for repairing more complex issues with your WinDaq file.
 
 For more info regarding WinDaq header, please visit https://www.dataq.com/resources/techinfo/ff.htm
+
+Other errors concerning illegal headers after 110, such as "Illegal header value 118 bytes from the start of the file", usually indicated more complicaterd problem and this blog https://www.dataq.com/blog/analysis-software/reset-the-windaq-header-to-clear-up-illegal-header-value-errors/ points a direction on how to repair it.
