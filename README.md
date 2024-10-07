@@ -23,3 +23,5 @@ You can modify the program to include additional tests and remedial actions for 
 For more info regarding WinDaq header, please visit https://www.dataq.com/resources/techinfo/ff.htm
 
 Other errors concerning illegal value in header higher than offset 110, such as "Illegal header value 118 bytes from the start of the file", usually indicates a more complicated problem. This blog https://www.dataq.com/blog/analysis-software/reset-the-windaq-header-to-clear-up-illegal-header-value-errors/ shows how to repair it.
+
+Another error messesge is from the confusion of WDQ and WDH files. Its error messesge is like "File.... contains 16-bit data, which this application does not support." WinDaq has two different file format, file extension SomeDataFile.WDQ supports 14-bit ADC readings, while SomeDataFile.WDH and SomeDataFile.WHC support 16-bit ADC readings, and one should not change the file extension. To resolve this matter, please change the file extension to match the ADC reading format.  
