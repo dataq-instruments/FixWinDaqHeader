@@ -1,6 +1,6 @@
 # Utility for Fixing Common Issues with WinDaq Headers 
 
-Before downloading this utility, try [WinDaq Playback Web Viewer](https://www.dataq.com/products/windaq/indexwwb.html), this browser-based WWB will fix all the header errors listed below on the fly.
+Before downloading this utility, try [WinDaq Playback Web Viewer](https://www.dataq.com/products/windaq/indexwwb.html), this browser-based WWB will fix all the header errors listed below automatically, and it can play back WinDaq (wdh, wdq, whc, wdc) and Graphtec (gbd) data files on any modern computer/tablet/phone, iOS, macOS, Windows, ChromeOS, Linux, Android.
 
 If your hard drive is damaged or power is lost during data acquisition, your WinDaq file may become corrupted. This can lead to errors such as: "Illegal header value 8 bytes from the start of the file.", "Illegal header value 12 bytes from the start of the file", "Illegal header value 16 bytes from the start of the file", "Illegal header value 28 bytes from the start of the file." or "Illegal header value 44 bytes from the start of the file".
 
